@@ -58,7 +58,7 @@ public class MessageController {
 
     @MessageMapping("/changeMessage")
     @SendTo("/topic/activity")
-    public Message change(Message message){
+    public Message message(Message message){
         return messageRepo.save(message);
     }
 }
